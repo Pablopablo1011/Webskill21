@@ -1,0 +1,15 @@
+.gris{
+    background-color: #f5f9fc;
+}
+.verde{
+    background-color: #28a745;
+}
+.verdetabla{
+    background-color: #cfe8cf;
+}
+.tabla-verde td{
+    background-color: #cfe8cf;
+}
+.tabla-verde tr:nth-child(odd) td{
+    background-color: #bcd3c0;
+}

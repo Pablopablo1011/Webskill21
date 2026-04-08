@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -47,10 +47,12 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrate</a>
+                        <a class="nav-link " href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalRegistro">Registrate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Inicia sesión</a>
+                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Inicia
+                            sesión</a>
                     </li>
                 </ul>
             </div>
@@ -59,40 +61,41 @@
     <main>
         <div class="container mt-4">
             <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="0" class="active"
+                        aria-current="true"></button>
+                    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carouselId" data-bs-slide-to="4"></button>
+                </div>
 
-                <div class="carousel-inner" role="listbox">
-
+                <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/carrusel/anfibios1.png" class="d-block w-100" alt="" />
+                        <img src="img/carrusel/anfibios1.png" class="d-block w-100" alt="">
                     </div>
-
                     <div class="carousel-item">
-                        <img src="img/carrusel/aves1.png" class="d-block w-100" alt="" />
+                        <img src="img/carrusel/aves1.png" class="d-block w-100" alt="">
                     </div>
-
                     <div class="carousel-item">
-                        <img src="img/carrusel/mamiferos1.png" class="d-block w-100" alt="" />
+                        <img src="img/carrusel/mamiferos1.png" class="d-block w-100" alt="">
                     </div>
-
                     <div class="carousel-item">
-                        <img src="img//carrusel/peces1.png" class="d-block w-100" alt="" />
+                        <img src="img/carrusel/peces1.png" class="d-block w-100" alt="">
                     </div>
-
                     <div class="carousel-item">
-                        <img src="img//carrusel/reptiles1.png" class="d-block w-100" alt="" />
+                        <img src="img/carrusel/reptiles1.png" class="d-block w-100" alt="">
                     </div>
                 </div>
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon"></span>
                 </button>
 
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
-
             <div class="text-center my-4">
                 <h1>Catálogo de animales</h1>
                 <h2>Los otros animales de la tierra</h2>
@@ -138,9 +141,18 @@
         <div class="footer d-flex   py-5  align-items-start justify-content-between">
 
 
-            <button class="btn btn-success text-white btn-sm align-self-start" type="button" data-bs-target="#menu">
+            <button class="btn btn-success text-white btn-sm align-self-start" type="button" onclick="scrollToTop()">
                 Subir
             </button>
+
+            <script>
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            </script>
             <div class="navf">
                 <ul class="navf-list list-unstyled text-center ">
                     <li class="navf-item"><a class="navf-link  text-decoration-none"
@@ -163,89 +175,96 @@
             </div>
             <div class="navf ">
                 <ul class="navf-list list-unstyled text-center">
-                    <li class="navf-item"><a class="navf-link text-decoration-none fw-normal" href="quienessomos.html">Quienes Somos</a>
+                    <li class="navf-item"><a class="navf-link text-decoration-none fw-normal"
+                            href="quienessomos.html">Quienes Somos</a>
                     </li>
                     <li class="navf-item"><a class="navf-link text-decoration-none fw-normal" data-bs-toggle="modal"
                             data-bs-target="#modalPrivacidad" href="#">Privacidad</a></li>
-                    <li class="navf-item"><a class="navf-link text-decoration-none fw-normal"  data-bs-toggle="modal" data-bs-target="#modalContacto" href="#" >Contacto</a></li>
+                    <li class="navf-item"><a class="navf-link text-decoration-none fw-normal" data-bs-toggle="modal"
+                            data-bs-target="#modalContacto" href="#">Contacto</a></li>
                 </ul>
             </div>
-            <button class="btn btn-success text-white btn-sm align-self-start" type="button" data-bs-target="#menu">
-                HOME
-            </button>
+            <a href="index.html">
+                <button class="btn btn-success text-white btn-sm align-self-start" type="button">
+                    HOME
+                </button>
+            </a>
         </div>
         <div class="txt text-center w-100 fw-bold ">Catálogo de animales © S1DAM-S1DAW</div>
     </footer>
     <!-- Modal Registro -->
-<div class="modal fade" id="modalRegistro" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center w-100" id="modalTitleId">
-                    Registro de usuario
-                </h5>
-            </div>
-            <form action="#" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="usuario" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
-
-                        <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="" />
-
-                        <label for="repiteContrasena" class="form-label">Repite la contraseña</label>
-                        <input type="password" class="form-control" name="repiteContrasena" id="repiteContrasena" placeholder="" />
-
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" id="email"
-                            aria-describedby="emailHelpId" placeholder="" />
-
-                        <label for="direccion" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder="" />
-
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- Modal Inicia Sesión -->
-<div class="modal fade" id="modalLogin" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center w-100 text-uppercase fw-bold" id="modalTitleId">
-                    Inicia Sesión
-                </h5>
-            </div>
-            <form action="#" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="usuario" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
-
-                        <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-     <!-- Modal Privacidad -->
-    <div class="modal fade" id="modalPrivacidad" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    <div class="modal fade" id="modalRegistro" tabindex="-1" data-bs-keyboard="false" role="dialog"
         aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100" id="modalTitleId">
+                        Registro de usuario
+                    </h5>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
+
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="contrasena" id="contrasena"
+                                placeholder="" />
+
+                            <label for="repiteContrasena" class="form-label">Repite la contraseña</label>
+                            <input type="password" class="form-control" name="repiteContrasena" id="repiteContrasena"
+                                placeholder="" />
+
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="emailHelpId" placeholder="" />
+
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="" />
+
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Inicia Sesión -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100 text-uppercase fw-bold" id="modalTitleId">
+                        Inicia Sesión
+                    </h5>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
+
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="contrasena" id="contrasena"
+                                placeholder="" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Privacidad -->
+    <div class="modal fade" id="modalPrivacidad" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
 
@@ -367,36 +386,36 @@
     </div>
 
     <!-- Modal Contacto -->
-<div class="modal fade" id="modalContacto" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center w-100" id="modalTitleId">
-                    Escribe un comentario para contactar
-                </h5>
-            </div>
-            <form action="#" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
+    <div class="modal fade" id="modalContacto" tabindex="-1" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100" id="modalTitleId">
+                        Escribe un comentario para contactar
+                    </h5>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
 
-                        <label for="email" class="form-label">Tu E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email"
-                            aria-describedby="emailHelpId" placeholder="abc@mail.com" />
+                            <label for="email" class="form-label">Tu E-mail</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="emailHelpId" placeholder="abc@mail.com" />
 
-                        <label for="comentario" class="form-label">Tu comentario</label>
-                        <textarea class="form-control" name="comentario" id="comentario" rows="5"></textarea>
+                            <label for="comentario" class="form-label">Tu comentario</label>
+                            <textarea class="form-control" name="comentario" id="comentario" rows="5"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

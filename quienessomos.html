@@ -10,11 +10,11 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-            <link rel="stylesheet" href="css/style.css">
-    </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
-<header>
+    <header>
         <div class="d-flex justify-content-start gap-1 px-2 py-2 align-items-center navbar navbar-expand-lg">
             <div class="log  w-auto"><img src="img/logos/logo.png" alt="" width="60"></div>
             <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -46,10 +46,12 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#modalRegistro">Registrate</a>
+                        <a class="nav-link " href="#" data-bs-toggle="modal"
+                            data-bs-target="#modalRegistro">Registrate</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Inicia sesión</a>
+                        <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Inicia
+                            sesión</a>
                     </li>
                 </ul>
             </div>
@@ -66,7 +68,7 @@
                 publicar información de
                 animales, con rigor y libertad. Nuestro compromiso es con la verdad, sin fanatismos. Nuestro ideario
                 tiene tres líneas rojas
-              <br>innegociables: ser libres, ser fiables y ser honestos. </br>
+                <br>innegociables: ser libres, ser fiables y ser honestos. </br>
             </p>
             <div class="accordion mt-4" id="accordionExample">
                 <div class="accordion-item">
@@ -162,13 +164,22 @@
             </div>
         </div>
     </main>
-  <footer class="footer ">
+    <footer class="footer ">
         <div class="footer d-flex   py-5  align-items-start justify-content-between">
 
 
-            <button class="btn btn-success text-white btn-sm align-self-start" type="button" data-bs-target="#menu">
+            <button class="btn btn-success text-white btn-sm align-self-start" type="button" onclick="scrollToTop()">
                 Subir
             </button>
+
+            <script>
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            </script>
             <div class="navf">
                 <ul class="navf-list list-unstyled text-center ">
                     <li class="navf-item"><a class="navf-link  text-decoration-none"
@@ -195,85 +206,91 @@
                     </li>
                     <li class="navf-item"><a class="navf-link text-decoration-none fw-normal" data-bs-toggle="modal"
                             data-bs-target="#modalPrivacidad" href="#">Privacidad</a></li>
-                    <li class="navf-item"><a class="navf-link text-decoration-none fw-normal"  data-bs-toggle="modal" data-bs-target="#modalContacto" href="#" >Contacto</a></li>
+                    <li class="navf-item"><a class="navf-link text-decoration-none fw-normal" data-bs-toggle="modal"
+                            data-bs-target="#modalContacto" href="#">Contacto</a></li>
                 </ul>
             </div>
-            <button class="btn btn-success text-white btn-sm align-self-start" type="button" data-bs-target="#menu">
-                HOME
-            </button>
+            <a href="index.html">
+                <button class="btn btn-success text-white btn-sm align-self-start" type="button">
+                    HOME
+                </button>
+            </a>
         </div>
         <div class="txt text-center w-100 fw-bold ">Catálogo de animales © S1DAM-S1DAW</div>
     </footer>
     <!-- Modal Registro -->
-<div class="modal fade" id="modalRegistro" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center w-100" id="modalTitleId">
-                    Registro de usuario
-                </h5>
-            </div>
-            <form action="#" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="usuario" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
-
-                        <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="" />
-
-                        <label for="repiteContrasena" class="form-label">Repite la contraseña</label>
-                        <input type="password" class="form-control" name="repiteContrasena" id="repiteContrasena" placeholder="" />
-
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email" id="email"
-                            aria-describedby="emailHelpId" placeholder="" />
-
-                        <label for="direccion" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder="" />
-
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- Modal Inicia Sesión -->
-<div class="modal fade" id="modalLogin" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center w-100 text-uppercase fw-bold" id="modalTitleId">
-                    Inicia Sesión
-                </h5>
-            </div>
-            <form action="#" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="usuario" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
-
-                        <label for="contrasena" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-     <!-- Modal Privacidad -->
-    <div class="modal fade" id="modalPrivacidad" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+    <div class="modal fade" id="modalRegistro" tabindex="-1" data-bs-keyboard="false" role="dialog"
         aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100" id="modalTitleId">
+                        Registro de usuario
+                    </h5>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
+
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="contrasena" id="contrasena"
+                                placeholder="" />
+
+                            <label for="repiteContrasena" class="form-label">Repite la contraseña</label>
+                            <input type="password" class="form-control" name="repiteContrasena" id="repiteContrasena"
+                                placeholder="" />
+
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="emailHelpId" placeholder="" />
+
+                            <label for="direccion" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="" />
+
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Inicia Sesión -->
+    <div class="modal fade" id="modalLogin" tabindex="-1" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100 text-uppercase fw-bold" id="modalTitleId">
+                        Inicia Sesión
+                    </h5>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="usuario" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="" />
+
+                            <label for="contrasena" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" name="contrasena" id="contrasena"
+                                placeholder="" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Privacidad -->
+    <div class="modal fade" id="modalPrivacidad" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
 
@@ -395,36 +412,36 @@
     </div>
 
     <!-- Modal Contacto -->
-<div class="modal fade" id="modalContacto" tabindex="-1" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-center w-100" id="modalTitleId">
-                    Escribe un comentario para contactar
-                </h5>
-            </div>
-            <form action="#" method="post">
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
+    <div class="modal fade" id="modalContacto" tabindex="-1" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center w-100" id="modalTitleId">
+                        Escribe un comentario para contactar
+                    </h5>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="" />
 
-                        <label for="email" class="form-label">Tu E-mail</label>
-                        <input type="email" class="form-control" name="email" id="email"
-                            aria-describedby="emailHelpId" placeholder="abc@mail.com" />
+                            <label for="email" class="form-label">Tu E-mail</label>
+                            <input type="email" class="form-control" name="email" id="email"
+                                aria-describedby="emailHelpId" placeholder="abc@mail.com" />
 
-                        <label for="comentario" class="form-label">Tu comentario</label>
-                        <textarea class="form-control" name="comentario" id="comentario" rows="5"></textarea>
+                            <label for="comentario" class="form-label">Tu comentario</label>
+                            <textarea class="form-control" name="comentario" id="comentario" rows="5"></textarea>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success w-100" data-bs-dismiss="modal">Entrar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
